@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Circle Class</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200px" height="200px" style="border: 1px solid"></canvas>
+</body>
+</html>
+<script>
+    class Circle {
+        constructor(x,y,radius) {
+            this.x=x;
+            this.y=y;
+            this.radius=radius;
+        }
+        render(ctx){
+            ctx.beginPath();
+            ctx.arc(this.x,this.y,this.radius, 0,2*Math.PI);
+             ctx.fillStyle='#000000';
+            ctx.fill();
+        }
+    }
+function drawCircle() {
+    let ctx=document.getElementById('myCanvas').getContext('2d');
+    let circle =new Circle(10,10,100);
+    circle.render(ctx);
+}
+    drawCircle();
+</script>

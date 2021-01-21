@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>so Fibonacci</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let number=prompt("Input the number: ");
+    let n=20
+    let count=2;
+    let a=0;
+    let b=1;
+    let c=0;
+    let str='0,1';
+    while (count<n){
+        c=a+b;
+        a=b;
+        b=c;
+        str +=','+ c;
+        count++;
+    }
+    console.log(str);
+    let flag=false;
+    function isFibonacci() {
+        for (let i = 0; i < str.length; i +=2) {
+            if (number === str[i]) {
+                flag = true;
+            }
+        }
+        if (flag){
+            document.write('True');
+        }else {
+            document.write('False');
+        }
+    }
+isFibonacci();
+
+</script>
